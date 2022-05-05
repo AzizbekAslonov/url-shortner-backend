@@ -18,6 +18,10 @@ class UrlController {
             if (!errors.isEmpty()) {
                 throw ApiError.badRequest(errors.array()[0].msg)
             }
+            // req.body.link - exist
+            if (!urlService.isValid(req.body.link)) {
+                throw ApiError.badRequest("Noto'g'ri manzil yuborildi")
+            }
 
             const { link } = req.body
             const url = await urlService.create(link, req.user.id)

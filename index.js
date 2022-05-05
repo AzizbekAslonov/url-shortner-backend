@@ -4,12 +4,13 @@ const cors = require('cors')
 const errorHandler = require('./middlewares/errorMidleware')
 const { sequelize } = require('./db')
 const helmet = require('helmet')
+const config = require('config')
 require('./models')
 
 const app = express()
 app.use(express.json())
 app.use(cors({
-   origin: "https://url-shortner-rose.vercel.app"
+   origin: config.get('CLIENT_URL')
 }))
 app.use(helmet({
    contentSecurityPolicy: false,

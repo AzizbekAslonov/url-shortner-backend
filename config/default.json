@@ -1,3 +1,4 @@
 {
-    "API_URL": "https://url-a.herokuapp.com"
+    "API_URL": "https://url-a.herokuapp.com",
+    "CLIENT_URL": "https://url-shortner-rose.vercel.app"
 }

@@ -9,7 +9,7 @@ require('./models')
 const app = express()
 app.use(express.json())
 app.use(cors({
-   origin: "https://url-shortner-rose.vercel.app/"
+   origin: "https://url-shortner-rose.vercel.app"
 }))
 app.use(helmet({
    contentSecurityPolicy: false,
